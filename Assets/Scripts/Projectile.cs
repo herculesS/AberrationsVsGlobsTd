@@ -26,6 +26,7 @@ public class Projectile : MonoBehaviour
         if (Target == null)
         {
             Destroy(this.gameObject);
+            return;
         }
         Vector3 diretion = (Target.transform.position - transform.position).normalized;
         var rot = Quaternion.LookRotation(diretion);

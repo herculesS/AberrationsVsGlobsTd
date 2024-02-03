@@ -17,12 +17,26 @@ public class CameraManager : MonoBehaviour
     void Update()
     {
         HandleEdgeScrolling();
+        //HandleZoomScroll();
 
+    }
+    void HandleZoomScroll()
+    {
+        float zoom = mainCamera.orthographicSize;
+        if (Input.mouseScrollDelta.y > 0f)
+        {
+            zoom = mainCamera.orthographicSize + 1;
+        }
+        else if (Input.mouseScrollDelta.y < 0f)
+        {
+            zoom = mainCamera.orthographicSize - 1;
+        }
+
+        mainCamera.orthographicSize = Mathf.Clamp(zoom, 4f, 6f);
     }
     void HandleEdgeScrolling()
     {
         Vector3 mousePos = Input.mousePosition;
-        Debug.Log(mousePos);
         bool isMouseInRightEdge = mousePos.x > Screen.width - edgeValue;
         bool isMouseInLeftEdge = mousePos.x < edgeValue;
         bool isMouseInTopEdge = mousePos.y > Screen.height - edgeValue;
@@ -51,7 +65,7 @@ public class CameraManager : MonoBehaviour
             float halfCameraHeight = mainCamera.orthographicSize;
             newPosition.x = Mathf.Clamp(newPosition.x, -tilemapSize.x / 2f + halfCameraWidth, tilemapSize.x / 2f - halfCameraWidth);
             newPosition.y = Mathf.Clamp(newPosition.y, -tilemapSize.y / 2f + halfCameraHeight, tilemapSize.y / 2f - halfCameraHeight);
-            mainCamera.transform.position = newPosition;
+            mainCamera.transform.position = newPosition ;
         }
     }
 }

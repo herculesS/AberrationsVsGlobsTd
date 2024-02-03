@@ -10,7 +10,11 @@ public class Enemy : MonoBehaviour
     int pathIndex = 0;
     private bool _endedPath = false;
 
+    int _health = 2;
+
+
     public bool PathEnded { get => _endedPath; private set => _endedPath = value; }
+    public int Health { get => _health; set => _health = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -27,9 +31,20 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Health == 0)
+        {
+            EnemyManager.Instance.DestroyEnemy(this.gameObject);
+        }
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        Projectile proj = other.gameObject.GetComponent<Projectile>();
+        if (proj != null)
+        {
+            Health -= proj.Damage;
+        }
+    }
     private bool MoveOnPath()
     {
         if (path == null || path.Count == 0 || pathIndex > path.Count - 1) return false;
@@ -67,7 +82,7 @@ public class Enemy : MonoBehaviour
 
     }
 
-    
+
 
 
 }

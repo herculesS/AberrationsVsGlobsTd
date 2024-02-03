@@ -15,9 +15,6 @@ public class EnemyManager : MonoBehaviour
     private List<GameObject> enemiesSpawned = new List<GameObject>();
     public static EnemyManager Instance { get; private set; }
 
-    /// <summary>
-    /// Awake is called when the script instance is being loaded.
-    /// </summary>
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -45,33 +42,34 @@ public class EnemyManager : MonoBehaviour
         {
             for (int y = startY; y < startY + bounds.size.y; y++)
             {
-                Vector3Int gridCoordinate = new Vector3Int(x, y, 0);
+                Vector3Int gridCoord = new Vector3Int(x, y, 0);
 
-                if (pathMap.HasTile(gridCoordinate))
+                if (pathMap.HasTile(gridCoord))
                 {
-
-                    Vector3 tilePosition = pathMap.GetCellCenterWorld(gridCoordinate);
+                    Vector3 tilePosition = pathMap.GetCellCenterWorld(gridCoord);
                     if (_locations.Count == 0)
                     {
                         _locations.Add(tilePosition);
-                        continue;
-                    }
-                    Vector3 LastPositionAdded = _locations[_locations.Count - 1];
-                    float absValue = Mathf.Abs(LastPositionAdded.x - tilePosition.x) +
-                        Mathf.Abs(LastPositionAdded.y - tilePosition.y);
-                    if (absValue > 1.01f)
-                    {
-                        orderingStack.Push(tilePosition);
                     }
                     else
                     {
-                        _locations.Add(tilePosition);
-                        while (orderingStack.Count > 0)
+                        Vector3 LastPositionAdded = _locations[_locations.Count - 1];
+                        float sumOfAbsInXandYAxis = Mathf.Abs(LastPositionAdded.x - tilePosition.x) +
+                            Mathf.Abs(LastPositionAdded.y - tilePosition.y);
+                        if (sumOfAbsInXandYAxis > 1.01f)
                         {
-                            _locations.Add(orderingStack.Pop());
+                            orderingStack.Push(tilePosition);
                         }
-                    }
+                        else
+                        {
+                            _locations.Add(tilePosition);
+                            while (orderingStack.Count > 0)
+                            {
+                                _locations.Add(orderingStack.Pop());
+                            }
+                        }
 
+                    }
                 }
 
             }
@@ -108,6 +106,47 @@ public class EnemyManager : MonoBehaviour
         else
         {
             Debug.Log("Enemy Not Found");
+        }
+
+    }
+    public GameObject GetClosestEnemyPosition(Vector3 positionToCompare, float range = -1f)
+    {
+        Vector3 closestPosition = new Vector3(10000f, 10000f, 0);
+        Vector3 maxRangePosition = new Vector3(10000f, 10000f, 0);
+        GameObject closestObj = null;
+        foreach (GameObject obj in enemiesSpawned)
+        {
+            float distanceToclosest = Vector3.Distance(positionToCompare, closestPosition);
+            float distanceToEnemy = Vector3.Distance(positionToCompare, obj.transform.position);
+            if (distanceToEnemy < distanceToclosest)
+            {
+                closestObj = obj;
+                closestPosition = obj.transform.position;
+            }
+        }
+
+        if (range > -1f)
+        {
+            if (Vector3.Distance(closestPosition, positionToCompare) <= range)
+            {
+                return closestObj;
+            }
+            else
+            {
+                return null;
+            }
+        }
+        else
+        {
+
+            if (closestPosition == maxRangePosition)
+            {
+                return closestObj;
+            }
+            else
+            {
+                return null;
+            }
         }
 
     }

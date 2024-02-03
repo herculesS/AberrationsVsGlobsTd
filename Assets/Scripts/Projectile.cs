@@ -23,6 +23,10 @@ public class Projectile : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (Target == null)
+        {
+            Destroy(this.gameObject);
+        }
         Vector3 diretion = (Target.transform.position - transform.position).normalized;
         var rot = Quaternion.LookRotation(diretion);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, 10f * Time.deltaTime);

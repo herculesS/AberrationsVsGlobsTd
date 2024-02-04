@@ -6,12 +6,15 @@ public class Tower : MonoBehaviour
 {
     [SerializeField] private float _range = 10f;
     [SerializeField] private float _fireRate = 1f;
+    [SerializeField] private int _cost = 100;
     [SerializeField] private GameObject _projectile;
 
 
     public float Range { get => _range; private set => _range = value; }
     public GameObject Target { get => _target; set => _target = value; }
     public float FireRate { get => _fireRate; private set => _fireRate = value; }
+    public int Cost { get => _cost; private set => _cost = value; }
+
 
     private GameObject _target;
     private float timeSinceLastShot = 0f;

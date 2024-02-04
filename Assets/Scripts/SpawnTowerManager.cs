@@ -9,9 +9,13 @@ public class SpawnTowerManager : MonoBehaviour
 
     public static SpawnTowerManager Instance { get; private set; }
 
+    public List<TowerSO> listOfTowers;
+
     public EventHandler<ArenaTileClickedArgs> OnArenaTileClicked;
+
+    private TilemapCollider2D arenaCollider;
     private bool wasTileClicked = false;
-    private Vector3 tileClickedPosition;
+    private Vector3Int tileClickedPosition;
 
     Tilemap arenaMap;
 
@@ -35,6 +39,7 @@ public class SpawnTowerManager : MonoBehaviour
     void Start()
     {
         arenaMap = GetComponent<Tilemap>();
+        arenaCollider = arenaMap.GetComponent<TilemapCollider2D>();
 
     }
 
@@ -46,26 +51,30 @@ public class SpawnTowerManager : MonoBehaviour
 
     private void OnMouseDown()
     {
-        OnArenaTileClicked?.Invoke(this, new ArenaTileClickedArgs());
-        //SpawnTile();
+        tileClickedPosition = arenaMap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        if (!ArenaTile.IsTileSpown(tileClickedPosition, SpownTiles))
+        {
+            wasTileClicked = true;
+            arenaCollider.enabled = false;
+            OnArenaTileClicked?.Invoke(this, new ArenaTileClickedArgs(listOfTowers));
+        }
     }
 
     public void HandleTowerSelected(object sender, TowerSelectionArgs args)
     {
-         Debug.Log("Tower selected should spawn");
+        wasTileClicked = false;
+        arenaCollider.enabled = true;
+
+        SpawnTile(args.TowerPrefab);
     }
 
-    void SpawnTile()
+    void SpawnTile(GameObject towerPrefab)
     {
-        Vector3Int PointInCellGrid = arenaMap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        if (!ArenaTile.IsTileSpown(PointInCellGrid, SpownTiles))
-        {
-            Vector3 clickedCellPosition = arenaMap.GetCellCenterWorld(PointInCellGrid);
-            GameObject obj = Instantiate(tempTowerPrefab, clickedCellPosition, Quaternion.identity);
-            ArenaTile arenaTile = new ArenaTile();
-            arenaTile.Tower = obj;
-            arenaTile.TilePositon = PointInCellGrid;
-            SpownTiles.Add(arenaTile);
-        }
+        Vector3 clickedCellPosition = arenaMap.GetCellCenterWorld(tileClickedPosition);
+        GameObject obj = Instantiate(towerPrefab, clickedCellPosition, Quaternion.identity);
+        ArenaTile arenaTile = new ArenaTile();
+        arenaTile.Tower = obj;
+        arenaTile.TilePositon = tileClickedPosition;
+        SpownTiles.Add(arenaTile);
     }
 }

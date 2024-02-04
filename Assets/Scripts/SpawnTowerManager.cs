@@ -2,17 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System;
 
-public class SpawnTower : MonoBehaviour
+public class SpawnTowerManager : MonoBehaviour
 {
+
+    public static SpawnTowerManager Instance { get; private set; }
+
+    public EventHandler<ArenaTileClickedArgs> OnArenaTileClicked;
+    private bool wasTileClicked = false;
+    private Vector3 tileClickedPosition;
+
     Tilemap arenaMap;
 
-    List<ArenaTile> _spownTiles = new List<ArenaTile>();
+    List<ArenaTile> _spawnedTiles = new List<ArenaTile>();
 
     [SerializeField] private GameObject tempTowerPrefab;
 
-    public List<ArenaTile> SpownTiles { get => _spownTiles; set => _spownTiles = value; }
-
+    public List<ArenaTile> SpownTiles { get => _spawnedTiles; set => _spawnedTiles = value; }
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +46,17 @@ public class SpawnTower : MonoBehaviour
 
     private void OnMouseDown()
     {
+        OnArenaTileClicked?.Invoke(this, new ArenaTileClickedArgs());
+        //SpawnTile();
+    }
+
+    public void HandleTowerSelected(object sender, TowerSelectionArgs args)
+    {
+         Debug.Log("Tower selected should spawn");
+    }
+
+    void SpawnTile()
+    {
         Vector3Int PointInCellGrid = arenaMap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
         if (!ArenaTile.IsTileSpown(PointInCellGrid, SpownTiles))
         {
@@ -38,7 +67,5 @@ public class SpawnTower : MonoBehaviour
             arenaTile.TilePositon = PointInCellGrid;
             SpownTiles.Add(arenaTile);
         }
-
-
     }
 }

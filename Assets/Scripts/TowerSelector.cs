@@ -7,53 +7,87 @@ using TMPro;
 
 public class TowerSelector : MonoBehaviour
 {
-
     public GameObject _selectionWindowUI;
     public GameObject _towerOptionUI;
     public GameObject _containerUI;
     public EventHandler<TowerSelectionArgs> OnTowerSelected;
-    // Start is called before the first frame update
+
+    private List<TowerOptionUI> towerOptions = new List<TowerOptionUI>();
+
+    private bool isWindowOpen = false;
     void Start()
     {
         OnTowerSelected += SpawnTowerManager.Instance.HandleTowerSelected;
+        OnTowerSelected += CurrencyManager.Instance.HandleTowerSelected;
         SpawnTowerManager.Instance.OnArenaTileClicked += HandleArenaTileClicked;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void HandleArenaTileClicked(object sender, ArenaTileClickedArgs args)
     {
-        _selectionWindowUI.SetActive(true);
-        List<TowerSO> towers = args.Towers;
-        for (int i = 0; i < towers.Count; i++)
+        ShowSelectionWindow();
+        List<TowerSO> listOfTowerSO = args.Towers;
+        foreach (TowerSO towerSO in listOfTowerSO)
         {
-            Tower twr = towers[i].towerPrefab.GetComponent<Tower>();
+            Tower tower = towerSO.towerPrefab.GetComponent<Tower>();
             GameObject obj = Instantiate(_towerOptionUI, _containerUI.transform.position, Quaternion.identity, _containerUI.transform);
-            TMP_Text costText = obj.transform.GetChild(0).GetComponent<TMP_Text>();
-            costText.text = twr.Cost + "c";
-            Image image = obj.transform.GetChild(1).GetComponent<Image>();
-            image.sprite = towers[i].towerIcon;
-            Button btn = obj.GetComponent<Button>();
-            GameObject twrPrefab = towers[i].towerPrefab;
-            btn.onClick.AddListener(delegate { towerSelected(twrPrefab); });
+            TowerOptionUI optionUI = new TowerOptionUI(obj, tower.Cost, towerSO.towerIcon);
+            if (optionUI.BuyButton != null)
+            {
+                if (!CurrencyManager.Instance.hasCrystals(tower.Cost))
+                {
+                    optionUI.BuyButton.interactable = false;
+                }
+
+                optionUI.BuyButton.onClick.AddListener(delegate { towerSelected(towerSO.towerPrefab, tower.Cost); });
+            }
+            towerOptions.Add(optionUI);
         }
+    }
+
+
+    public void towerSelected(GameObject towerSelected, int towerCost)
+    {
+        if (CurrencyManager.Instance.hasCrystals(towerCost))
+        {
+            ClearSelectorContainer();
+            HideSelectionWindow();
+
+            OnTowerSelected?.Invoke(this, new TowerSelectionArgs(towerSelected));
+        }
+
 
     }
 
-    public void towerSelected(GameObject towerSelected)
+    void Update()
     {
-        foreach (Transform item in _containerUI.transform)
+        if (isWindowOpen)
         {
-            Destroy(item.gameObject);
+            foreach (TowerOptionUI option in towerOptions)
+            {
+                if (!option.BuyButton.interactable && CurrencyManager.Instance.hasCrystals(option.Cost))
+                {
+                    option.BuyButton.interactable = true;
+                }
+            }
         }
-
+    }
+    private void HideSelectionWindow()
+    {
+        isWindowOpen = false;
         _selectionWindowUI.SetActive(false);
+    }
+    private void ShowSelectionWindow()
+    {
+        isWindowOpen = true;
+        _selectionWindowUI.SetActive(true);
+    }
 
-        OnTowerSelected?.Invoke(this, new TowerSelectionArgs(towerSelected));
-
+    private void ClearSelectorContainer()
+    {
+        towerOptions.Clear();
+        foreach (Transform childTransform in _containerUI.transform)
+        {
+            Destroy(childTransform.gameObject);
+        }
     }
 }

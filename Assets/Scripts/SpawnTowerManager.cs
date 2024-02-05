@@ -4,11 +4,8 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using System;
 
-public class SpawnTowerManager : MonoBehaviour
+public class SpawnTowerManager : Singleton<SpawnTowerManager>
 {
-
-    public static SpawnTowerManager Instance { get; private set; }
-
     public List<TowerSO> listOfTowers;
 
     public EventHandler<ArenaTileClickedArgs> OnArenaTileClicked;
@@ -24,17 +21,7 @@ public class SpawnTowerManager : MonoBehaviour
     [SerializeField] private GameObject tempTowerPrefab;
 
     public List<ArenaTile> SpownTiles { get => _spawnedTiles; set => _spawnedTiles = value; }
-    void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-        }
-    }
+
     // Start is called before the first frame update
     void Start()
     {

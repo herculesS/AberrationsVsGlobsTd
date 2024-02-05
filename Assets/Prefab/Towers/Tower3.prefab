@@ -99,4 +99,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _range: 2
   _fireRate: 3
+  _cost: 1
   _projectile: {fileID: 7522079024796509357, guid: ae3d30ad5d6535a40959e0585733c45c, type: 3}

@@ -19,8 +19,14 @@ public class EnemyManager : Singleton<EnemyManager>
     void Start()
     {
         InitializeLocations();
+        StartCoroutine(IncreaseEnemyPerSecond(2f));
     }
-
+    IEnumerator IncreaseEnemyPerSecond(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        enemyPerSecond += 0.1f;
+        StartCoroutine(IncreaseEnemyPerSecond(seconds));
+    }
     private void InitializeLocations()
     {
         Stack<Vector3> orderingStack = new Stack<Vector3>();
@@ -56,10 +62,8 @@ public class EnemyManager : Singleton<EnemyManager>
                                 _locations.Add(orderingStack.Pop());
                             }
                         }
-
                     }
                 }
-
             }
         }
     }
@@ -82,6 +86,7 @@ public class EnemyManager : Singleton<EnemyManager>
         Enemy enemy = obj.GetComponent<Enemy>();
         enemy.SetPath(_locations);
         enemy.onKilled += DestroyEnemy;
+        enemy.onKilled += CurrencyManager.Instance.HandleEnemyKilled;
     }
 
     public void DestroyEnemy(object sender, EnemyKilledEventArgs args)

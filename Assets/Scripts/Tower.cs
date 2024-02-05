@@ -6,7 +6,7 @@ public class Tower : MonoBehaviour
 {
     [SerializeField] private float _range = 10f;
     [SerializeField] private float _fireRate = 1f;
-    [SerializeField] private int _cost = 100;
+    [SerializeField] private int _cost = 1;
     [SerializeField] private GameObject _projectile;
 
 

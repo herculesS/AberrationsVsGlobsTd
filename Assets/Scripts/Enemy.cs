@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     Vector3 currentTargetPositionOnPath;
     int pathIndex = 0;
     private bool _endedPath = false;
-    int _health = 20;
+    int _health = 2;
 
     public EventHandler<EnemyKilledEventArgs> onKilled;
 

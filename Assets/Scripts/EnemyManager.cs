@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.Events;
+using System;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager : Singleton<EnemyManager>
 {
     private List<Vector3> _locations = new List<Vector3>();
     [SerializeField] private Tilemap pathMap;
@@ -13,19 +14,7 @@ public class EnemyManager : MonoBehaviour
     private float timeSinceLastEnemy = 0f;
 
     private List<GameObject> enemiesSpawned = new List<GameObject>();
-    public static EnemyManager Instance { get; private set; }
 
-    void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-        }
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +32,6 @@ public class EnemyManager : MonoBehaviour
             for (int y = startY; y < startY + bounds.size.y; y++)
             {
                 Vector3Int gridCoord = new Vector3Int(x, y, 0);
-
                 if (pathMap.HasTile(gridCoord))
                 {
                     Vector3 tilePosition = pathMap.GetCellCenterWorld(gridCoord);
@@ -93,15 +81,16 @@ public class EnemyManager : MonoBehaviour
         enemiesSpawned.Add(obj);
         Enemy enemy = obj.GetComponent<Enemy>();
         enemy.SetPath(_locations);
+        enemy.onKilled += DestroyEnemy;
     }
 
-    public void DestroyEnemy(GameObject enemy)
+    public void DestroyEnemy(object sender, EnemyKilledEventArgs args)
     {
-        int enemyIndex = enemiesSpawned.IndexOf(enemy);
+        int enemyIndex = enemiesSpawned.IndexOf(args.KilledEnemy);
         if (enemyIndex > -1)
         {
             enemiesSpawned.RemoveAt(enemyIndex);
-            Destroy(enemy);
+            Destroy(args.KilledEnemy);
         }
         else
         {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Enemy : MonoBehaviour
 {
@@ -9,18 +10,12 @@ public class Enemy : MonoBehaviour
     Vector3 currentTargetPositionOnPath;
     int pathIndex = 0;
     private bool _endedPath = false;
+    int _health = 20;
 
-    int _health = 2;
-
+    public EventHandler<EnemyKilledEventArgs> onKilled;
 
     public bool PathEnded { get => _endedPath; private set => _endedPath = value; }
     public int Health { get => _health; set => _health = value; }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     public void SetPath(List<Vector3> _path)
     {
@@ -31,9 +26,9 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Health == 0)
+        if (Health <= 0)
         {
-            EnemyManager.Instance.DestroyEnemy(this.gameObject);
+            Destroyed();
         }
     }
 
@@ -77,12 +72,13 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            EnemyManager.Instance.DestroyEnemy(this.gameObject);
+            Destroyed();
         }
 
     }
 
-
-
-
+    void Destroyed()
+    {
+        onKilled?.Invoke(this, new EnemyKilledEventArgs(gameObject));
+    }
 }

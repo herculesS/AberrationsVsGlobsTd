@@ -6,14 +6,12 @@ public class PathFinder
 {
     List<Node> openList = new List<Node>();
     List<Node> closedList = new List<Node>();
-    Node[,] nodes;
-    int width, height;
+    NodeGrid grid;
+  
 
-    public PathFinder(Node[,] nodes, int width, int height)
+    public PathFinder(NodeGrid grid)
     {
-        this.nodes = nodes;
-        this.width = width;
-        this.height = height;
+        this.grid = grid;
     }
     public List<Node> findPath(Node startPoint, Node endPoint)
     {
@@ -23,7 +21,6 @@ public class PathFinder
         while (openList.Count > 0)
         {
             Node currentNode = findLeastF(openList);
-            Debug.Log("CurrentNode" + currentNode.X + "/" + currentNode.Y);
             if (currentNode == endPoint)
             {
                 return CalculatePath(currentNode);
@@ -51,37 +48,33 @@ public class PathFinder
         return null;
     }
 
+    void AddNeighbor(List<Node> neighbors, NodeGrid.GridPosition pos)
+    {
+        if (grid.hasNode(pos))
+            if (grid.getNode(pos).IsWalkable)
+                neighbors.Add(grid.getNode(pos));
+    }
     List<Node> GetNeighbors(Node currentNode)
     {
         List<Node> neighbors = new List<Node>();
-        if (currentNode.X - 1 >= 0)
-        {
-            if (nodes[currentNode.X - 1, currentNode.Y].IsWalkable)
-                neighbors.Add(nodes[currentNode.X - 1, currentNode.Y]);
-            if (currentNode.Y - 1 >= 0)
-                if (nodes[currentNode.X - 1, currentNode.Y - 1].IsWalkable)
-                    neighbors.Add(nodes[currentNode.X - 1, currentNode.Y - 1]);
-            if (currentNode.Y + 1 < height)
-                if (nodes[currentNode.X - 1, currentNode.Y + 1].IsWalkable)
-                    neighbors.Add(nodes[currentNode.X - 1, currentNode.Y + 1]);
-        }
-        if (currentNode.X + 1 < width)
-        {
-            if (nodes[currentNode.X + 1, currentNode.Y].IsWalkable)
-                neighbors.Add(nodes[currentNode.X + 1, currentNode.Y]);
-            if (currentNode.Y - 1 >= 0)
-                if (nodes[currentNode.X + 1, currentNode.Y - 1].IsWalkable)
-                    neighbors.Add(nodes[currentNode.X + 1, currentNode.Y - 1]);
-            if (currentNode.Y + 1 < height)
-                if (nodes[currentNode.X + 1, currentNode.Y + 1].IsWalkable)
-                    neighbors.Add(nodes[currentNode.X + 1, currentNode.Y + 1]);
-        }
-        if (currentNode.Y - 1 >= 0)
-            if (nodes[currentNode.X, currentNode.Y - 1].IsWalkable)
-                neighbors.Add(nodes[currentNode.X, currentNode.Y - 1]);
-        if (currentNode.Y + 1 < height)
-            if (nodes[currentNode.X, currentNode.Y + 1].IsWalkable)
-                neighbors.Add(nodes[currentNode.X, currentNode.Y + 1]);
+        NodeGrid.GridPosition pos = new NodeGrid.GridPosition(0, 0);
+
+        pos.SetPosition(currentNode.X - 1, currentNode.Y);
+        AddNeighbor(neighbors, pos);
+        pos.SetPosition(currentNode.X - 1, currentNode.Y - 1);
+        AddNeighbor(neighbors, pos);
+        pos.SetPosition(currentNode.X - 1, currentNode.Y + 1);
+        AddNeighbor(neighbors, pos);
+        pos.SetPosition(currentNode.X + 1, currentNode.Y);
+        AddNeighbor(neighbors, pos);
+        pos.SetPosition(currentNode.X + 1, currentNode.Y - 1);
+        AddNeighbor(neighbors, pos);
+        pos.SetPosition(currentNode.X + 1, currentNode.Y + 1);
+        AddNeighbor(neighbors, pos);
+        pos.SetPosition(currentNode.X, currentNode.Y - 1);
+        AddNeighbor(neighbors, pos);
+        pos.SetPosition(currentNode.X, currentNode.Y + 1);
+        AddNeighbor(neighbors, pos);
 
         return neighbors;
     }
@@ -109,7 +102,7 @@ public class PathFinder
     }
     List<Node> CalculatePath(Node endPoint)
     {
-        Debug.Log("Path ended");
+        //Debug.Log("Path ended");
         List<Node> path = new List<Node>();
         path.Add(endPoint);
         Node currentNode = endPoint;

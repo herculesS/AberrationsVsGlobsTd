@@ -44,8 +44,6 @@ public class TilemapManager : Singleton<TilemapManager>
     }
     public Vector3Int GetLastArenaPath()
     {
-        Debug.Log("Arena Origin" + arena.origin.x + "/" + arena.origin.y);
-        Debug.Log("Arena size" + arena.size.x + "/" + arena.size.y);
         Vector3Int size = arena.size;
         for (int i = arena.origin.y; i < arena.origin.y + arena.cellBounds.size.y; i++)
         {
@@ -58,26 +56,30 @@ public class TilemapManager : Singleton<TilemapManager>
         return Vector3Int.zero;
     }
 
-    public Node[,] getPathNodes()
+    public Vector3 getPathTileCenterPosition(Vector3Int gridPosition)
+    {
+        return path.GetCellCenterWorld(gridPosition);
+    }
+
+    public NodeGrid getPathNodes()
     {
         Vector3Int size = path.size;
+        Vector3Int pathOrigin = path.origin;
 
         int width = size.x;
         int height = size.y;
-        Node[,] nodes = new Node[width, height];
+        NodeGrid grid = new NodeGrid(new NodeGrid.GridPosition(pathOrigin.x, pathOrigin.y), width, height);
 
-        for (int x = 0; x < width; x++)
+        foreach (var pair in grid.All())
         {
-            for (int y = 0; y < height; y++)
+            if (!path.HasTile(new Vector3Int(pair.Value.X, pair.Value.Y, 0)))
             {
-                nodes[x, y] = new Node(x, y);
-                /* if (!path.HasTile(new Vector3Int(x - width / 2, y - height, 0)))
-                {
-                    nodes[x, y].IsWalkable = false;
-                } */
+                Debug.Log(string.Format("Position: [X: {0}, Y: {1}]", pair.Key.X, pair.Key.Y));
+                grid.getNode(pair.Key).IsWalkable = false;
             }
         }
-        return nodes;
+
+        return grid;
     }
 
 }

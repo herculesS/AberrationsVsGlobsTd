@@ -14,11 +14,23 @@ public class EnemyManager : Singleton<EnemyManager>
     private float timeSinceLastEnemy = 0f;
 
     private List<GameObject> enemiesSpawned = new List<GameObject>();
+    private List<Node> path;
+    private PathFinder pathFinder;
 
     // Start is called before the first frame update
     void Start()
     {
-        InitializeLocations();
+        pathFinder = new PathFinder(TilemapManager.Instance.getPathNodes());
+        path = pathFinder.findPath(new Node(-11, -1), new Node(10, -2));
+        foreach (Node node in path)
+        {
+            Vector3 tilePosition = TilemapManager.Instance.getPathTileCenterPosition(new Vector3Int(node.X, node.Y, 0));
+            _locations.Add(tilePosition);
+        }
+
+
+        //InitializeLocations();
+
         StartCoroutine(IncreaseEnemyPerSecond(2f));
     }
     IEnumerator IncreaseEnemyPerSecond(float seconds)

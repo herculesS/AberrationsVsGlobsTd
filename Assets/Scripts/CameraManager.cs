@@ -65,7 +65,7 @@ public class CameraManager : MonoBehaviour
             float halfCameraHeight = mainCamera.orthographicSize;
             newPosition.x = Mathf.Clamp(newPosition.x, -tilemapSize.x / 2f + halfCameraWidth, tilemapSize.x / 2f - halfCameraWidth);
             newPosition.y = Mathf.Clamp(newPosition.y, -tilemapSize.y / 2f + halfCameraHeight, tilemapSize.y / 2f - halfCameraHeight);
-            mainCamera.transform.position = newPosition ;
+            mainCamera.transform.position = newPosition;
         }
     }
 }

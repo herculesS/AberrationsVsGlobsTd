@@ -18,18 +18,10 @@ public class Tower : MonoBehaviour
 
     private GameObject _target;
     private float timeSinceLastShot = 0f;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
     void UpdateTimers()
     {
         timeSinceLastShot += Time.deltaTime;
     }
-    // Update is called once per frame
     void Update()
     {
         UpdateTimers();
@@ -67,6 +59,5 @@ public class Tower : MonoBehaviour
     {
         GameObject closestEnemy = EnemyManager.Instance.GetClosestEnemyPosition(transform.position, Range);
         Target = closestEnemy;
-
     }
 }

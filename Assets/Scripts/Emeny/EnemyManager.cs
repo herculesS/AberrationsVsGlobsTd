@@ -7,8 +7,7 @@ using System;
 
 public class EnemyManager : Singleton<EnemyManager>
 {
-    private List<Vector3> _locations = new List<Vector3>();
-    [SerializeField] private Tilemap pathMap;
+    private List<Vector3> pathInWorldPositions = new List<Vector3>();
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private float enemyPerSecond = 0.5f;
     private float timeSinceLastEnemy = 0f;
@@ -25,12 +24,8 @@ public class EnemyManager : Singleton<EnemyManager>
         foreach (Node node in path)
         {
             Vector3 tilePosition = TilemapManager.Instance.getPathTileCenterPosition(new Vector3Int(node.X, node.Y, 0));
-            _locations.Add(tilePosition);
+            pathInWorldPositions.Add(tilePosition);
         }
-
-
-        //InitializeLocations();
-
         StartCoroutine(IncreaseEnemyPerSecond(2f));
     }
     IEnumerator IncreaseEnemyPerSecond(float seconds)
@@ -39,47 +34,7 @@ public class EnemyManager : Singleton<EnemyManager>
         enemyPerSecond += 0.1f;
         StartCoroutine(IncreaseEnemyPerSecond(seconds));
     }
-    private void InitializeLocations()
-    {
-        Stack<Vector3> orderingStack = new Stack<Vector3>();
-        BoundsInt bounds = pathMap.cellBounds;
-        int startx = pathMap.origin.x;
-        int startY = pathMap.origin.y;
-        for (int x = startx; x < startx + bounds.size.x; x++)
-        {
-            for (int y = startY; y < startY + bounds.size.y; y++)
-            {
-                Vector3Int gridCoord = new Vector3Int(x, y, 0);
-                if (pathMap.HasTile(gridCoord))
-                {
-                    Vector3 tilePosition = pathMap.GetCellCenterWorld(gridCoord);
-                    if (_locations.Count == 0)
-                    {
-                        _locations.Add(tilePosition);
-                    }
-                    else
-                    {
-                        Vector3 LastPositionAdded = _locations[_locations.Count - 1];
-                        float sumOfAbsInXandYAxis = Mathf.Abs(LastPositionAdded.x - tilePosition.x) +
-                            Mathf.Abs(LastPositionAdded.y - tilePosition.y);
-                        if (sumOfAbsInXandYAxis > 1.01f)
-                        {
-                            orderingStack.Push(tilePosition);
-                        }
-                        else
-                        {
-                            _locations.Add(tilePosition);
-                            while (orderingStack.Count > 0)
-                            {
-                                _locations.Add(orderingStack.Pop());
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         if (timeSinceLastEnemy > 1f / enemyPerSecond)
         {
@@ -93,10 +48,10 @@ public class EnemyManager : Singleton<EnemyManager>
     }
     void SpawnEnemy()
     {
-        GameObject obj = Instantiate(enemyPrefab, _locations[0], Quaternion.identity);
+        GameObject obj = Instantiate(enemyPrefab, pathInWorldPositions[0], Quaternion.identity);
         enemiesSpawned.Add(obj);
         Enemy enemy = obj.GetComponent<Enemy>();
-        enemy.SetPath(_locations);
+        enemy.SetPath(pathInWorldPositions);
         enemy.onKilled += DestroyEnemy;
         enemy.onKilled += CurrencyManager.Instance.HandleEnemyKilled;
     }
@@ -144,7 +99,6 @@ public class EnemyManager : Singleton<EnemyManager>
         }
         else
         {
-
             if (closestPosition == maxRangePosition)
             {
                 return closestObj;
@@ -154,11 +108,6 @@ public class EnemyManager : Singleton<EnemyManager>
                 return null;
             }
         }
-
-    }
-    // Update is called once per frame
-    void Update()
-    {
 
     }
 }

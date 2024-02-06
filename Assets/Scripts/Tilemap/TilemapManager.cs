@@ -7,19 +7,6 @@ public class TilemapManager : Singleton<TilemapManager>
 {
 
     [SerializeField] private Tilemap backGround, arena, path;
-    // Start is called before the first frame update
-
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public Vector3Int getTotalTileMapsSize()
     {
         return backGround.size;
@@ -69,16 +56,13 @@ public class TilemapManager : Singleton<TilemapManager>
         int width = size.x;
         int height = size.y;
         NodeGrid grid = new NodeGrid(new NodeGrid.GridPosition(pathOrigin.x, pathOrigin.y), width, height);
-
         foreach (var pair in grid.All())
         {
             if (!path.HasTile(new Vector3Int(pair.Value.X, pair.Value.Y, 0)))
             {
-                Debug.Log(string.Format("Position: [X: {0}, Y: {1}]", pair.Key.X, pair.Key.Y));
                 grid.getNode(pair.Key).IsWalkable = false;
             }
         }
-
         return grid;
     }
 

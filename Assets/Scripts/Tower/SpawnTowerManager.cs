@@ -7,9 +7,7 @@ using System;
 public class SpawnTowerManager : Singleton<SpawnTowerManager>
 {
     public List<TowerSO> listOfTowers;
-
     public EventHandler<ArenaTileClickedArgs> OnArenaTileClicked;
-
     private TilemapCollider2D arenaCollider;
     private bool wasTileClicked = false;
     private Vector3Int tileClickedPosition;
@@ -20,26 +18,18 @@ public class SpawnTowerManager : Singleton<SpawnTowerManager>
 
     [SerializeField] private GameObject tempTowerPrefab;
 
-    public List<ArenaTile> SpownTiles { get => _spawnedTiles; set => _spawnedTiles = value; }
+    public List<ArenaTile> TilesSpawned { get => _spawnedTiles; set => _spawnedTiles = value; }
 
-    // Start is called before the first frame update
     void Start()
     {
         arenaMap = GetComponent<Tilemap>();
         arenaCollider = arenaMap.GetComponent<TilemapCollider2D>();
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnMouseDown()
     {
         tileClickedPosition = arenaMap.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        if (!ArenaTile.IsTileSpown(tileClickedPosition, SpownTiles))
+        if (!ArenaTile.IsTileSpawned(tileClickedPosition, TilesSpawned))
         {
             wasTileClicked = true;
             arenaCollider.enabled = false;
@@ -61,7 +51,7 @@ public class SpawnTowerManager : Singleton<SpawnTowerManager>
         GameObject obj = Instantiate(towerPrefab, clickedCellPosition, Quaternion.identity);
         ArenaTile arenaTile = new ArenaTile();
         arenaTile.Tower = obj;
-        arenaTile.TilePositon = tileClickedPosition;
-        SpownTiles.Add(arenaTile);
+        arenaTile.TilePosition = tileClickedPosition;
+        TilesSpawned.Add(arenaTile);
     }
 }

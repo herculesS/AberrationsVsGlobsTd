@@ -6,7 +6,6 @@ public class NodeGrid
 {
     int width;
     int height;
-
     Dictionary<GridPosition, Node> grid = new Dictionary<GridPosition, Node>();
 
     public NodeGrid(GridPosition start, int width, int height)
@@ -17,9 +16,7 @@ public class NodeGrid
         {
             for (int x = start.X; x < start.X + width; x++)
             {
-
                 GridPosition pos = new GridPosition(x, y);
-
                 grid.Add(pos, new Node(x, y));
             }
         }
@@ -34,11 +31,9 @@ public class NodeGrid
     {
         if (!grid.ContainsKey(position))
         {
-
             return null;
 
         }
-
         return grid[position];
     }
 

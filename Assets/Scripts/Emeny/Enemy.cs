@@ -9,17 +9,17 @@ public class Enemy : MonoBehaviour
     List<Vector3> path;
     Vector3 currentTargetPositionOnPath;
     int pathIndex = 0;
-    private bool _endedPath = false;
-    int _health = 2;
+    private bool pathEnded = false;
+    int health = 2;
 
     public EventHandler<EnemyKilledEventArgs> onKilled;
 
-    public bool PathEnded { get => _endedPath; private set => _endedPath = value; }
-    public int Health { get => _health; set => _health = value; }
+    public bool PathEnded { get => pathEnded; private set => pathEnded = value; }
+    public int Health { get => health; set => health = value; }
 
-    public void SetPath(List<Vector3> _path)
+    public void SetPath(List<Vector3> path)
     {
-        path = _path;
+        this.path = path;
         currentTargetPositionOnPath = path[pathIndex];
     }
 

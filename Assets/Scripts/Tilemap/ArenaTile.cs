@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class ArenaTile
 {
-    private GameObject _tower;
-    private Vector3 _tilePositon;
+    private GameObject tower;
+    private Vector3 tilePosition;
 
-    public GameObject Tower { get => _tower; set => _tower = value; }
-    public Vector3 TilePositon { get => _tilePositon; set => _tilePositon = value; }
+    public GameObject Tower { get => tower; set => tower = value; }
+    public Vector3 TilePosition { get => tilePosition; set => tilePosition = value; }
 
 
-    public static bool IsTileSpown(Vector3Int gridPosition, List<ArenaTile> arenaTiles)
+    public static bool IsTileSpawned(Vector3Int gridPosition, List<ArenaTile> arenaTiles)
     {
         foreach (ArenaTile tile in arenaTiles)
         {
-            if (Vector3.Distance(tile.TilePositon, gridPosition) < 0.1f)
+            if (Vector3.Distance(tile.TilePosition, gridPosition) < 0.1f)
             {
                 return true;
             }

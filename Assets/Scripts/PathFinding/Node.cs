@@ -25,12 +25,6 @@ public class Node
         g = Int32.MaxValue;
         parent = null;
     }
-
-    public void CalculateFCost()
-    {
-
-    }
-
     public static bool operator ==(Node a, Node b)
     {
         if (a is null)

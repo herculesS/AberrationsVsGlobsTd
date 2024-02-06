@@ -7,8 +7,6 @@ public class PathFinder
     List<Node> openList = new List<Node>();
     List<Node> closedList = new List<Node>();
     NodeGrid grid;
-  
-
     public PathFinder(NodeGrid grid)
     {
         this.grid = grid;
@@ -102,7 +100,6 @@ public class PathFinder
     }
     List<Node> CalculatePath(Node endPoint)
     {
-        //Debug.Log("Path ended");
         List<Node> path = new List<Node>();
         path.Add(endPoint);
         Node currentNode = endPoint;

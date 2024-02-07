@@ -1,0 +1,1834 @@
+fileFormatVersion: 2
+guid: 22a5bfb763d55b64b953e046097f31d2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: aiterrain_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2854
+        width: 411
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e8a94424e3f6f24e9b88c3c014d5fbd
+      internalID: -791314941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_1
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 2860
+        width: 328
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7396472dad0bb7478b0eab5728d21c3
+      internalID: 1114011427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_2
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 2863
+        width: 359
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98379626dad7464a91bde9b1fd2fba5
+      internalID: -58091917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_3
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 2877
+        width: 288
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab833eb10630d74d9b2aeccf012bcf4
+      internalID: -793746764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_4
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 2874
+        width: 340
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56df9116d8e358479884de279ce6bca
+      internalID: -475346826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_5
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 2876
+        width: 282
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d34bfd6cf8b1e4fba6b1a142c5ec13
+      internalID: -1398954272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_6
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 2859
+        width: 209
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279bca25c3555854daf87db8e50d47bf
+      internalID: 175604073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_7
+      rect:
+        serializedVersion: 2
+        x: 2865
+        y: 2873
+        width: 254
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c7c27b581a93a48910e21d6b3a7179
+      internalID: -743889090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2510
+        width: 374
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ac25bf861e25c46b4b99401d835e0d
+      internalID: -2058743308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_9
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 2512
+        width: 358
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0da7cb84c539243835f65daff7f06d
+      internalID: -682399490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_10
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 2507
+        width: 337
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181a65795bfefdb47b09efacd72aeee7
+      internalID: 1929693150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_11
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 2513
+        width: 294
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde03a41fd4f5fa408df38e024c90633
+      internalID: 1290365570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_12
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 2512
+        width: 312
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6802d904375d3e46abfced3a607a3cc
+      internalID: 1058188815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_13
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 2510
+        width: 291
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711263b54ea3f0a458d1980581e3b75b
+      internalID: 984180822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_14
+      rect:
+        serializedVersion: 2
+        x: 2563
+        y: 2510
+        width: 213
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053b38796cb7ea343b73b3308a75245e
+      internalID: -293950815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_15
+      rect:
+        serializedVersion: 2
+        x: 2842
+        y: 2512
+        width: 276
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d52d461b50029d44beae870b26c64cd
+      internalID: 1257418974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_16
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2212
+        width: 196
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf556e004b5ca24b8c569c6439f4af8
+      internalID: -1325617361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_17
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 2205
+        width: 158
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003752c5b1799f34ca4321e0a1adaf03
+      internalID: 1072083277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 2210
+        width: 319
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ce6b6b11c4fb64b81558665be26696
+      internalID: 428126014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_19
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 2201
+        width: 332
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee734c5f9920364b94db70c6ee70a60
+      internalID: -1278624722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_20
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 2201
+        width: 297
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b5a41d63caaea4ab2bfb0bb6980ddd
+      internalID: -49911510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_21
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 2151
+        width: 319
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c92f2d795df1a4383f7fd3040b3089
+      internalID: 660527545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_22
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 2154
+        width: 278
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf58f2cda6624f4e857ba187acd361f
+      internalID: -2143467101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_23
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 2198
+        width: 156
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68cf7a3c642056d4292755fc745346f8
+      internalID: 495807349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_24
+      rect:
+        serializedVersion: 2
+        x: 2820
+        y: 2218
+        width: 310
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2049125dd5ddd904292f33e27924aa62
+      internalID: -663855902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_25
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1793
+        width: 379
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96f2588e8190ee42a901a2dffda8145
+      internalID: -987733044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_26
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1793
+        width: 397
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2025f72d64f0c4c449ad802f4bbfbb63
+      internalID: 1679965036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_27
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1791
+        width: 359
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4fd04110c8fca4b9b1c621ddc83c2a
+      internalID: 1151743296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_28
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 1793
+        width: 315
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3031d0b2bbe13ee4e91cf2f26713c7f5
+      internalID: 306417980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_29
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 1796
+        width: 284
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a1af90b79998f4389082730deca8b7
+      internalID: -232926751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_30
+      rect:
+        serializedVersion: 2
+        x: 2201
+        y: 1812
+        width: 287
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad9ce59f76aaae4cb12bd591c8956e6
+      internalID: 501931362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_31
+      rect:
+        serializedVersion: 2
+        x: 2501
+        y: 1937
+        width: 284
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf9898bbdd571344a7bda0c4e2645fd
+      internalID: 1738641593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_32
+      rect:
+        serializedVersion: 2
+        x: 2837
+        y: 1792
+        width: 276
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c340a4c905a9a949b1bf0aeb815435d
+      internalID: -296603806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_33
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 1443
+        width: 373
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da4547550ac0a834683cf10147c502da
+      internalID: 230390083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_34
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 1454
+        width: 373
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2515d3f7c1d42d647b06b9c4e91349c8
+      internalID: -837522325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_35
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 1426
+        width: 353
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cee168e25c92ce4bb9be68d648c1661
+      internalID: -71637926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_36
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 1410
+        width: 313
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e654fbc80f4123040a86cb840fbb53a2
+      internalID: 1050835654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_37
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 1390
+        width: 275
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d7c88675cd76e4783181f7139460e1
+      internalID: 1651474057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_38
+      rect:
+        serializedVersion: 2
+        x: 2212
+        y: 1396
+        width: 314
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1a14424a02cf284897c79c483ca155f
+      internalID: 1719309318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_39
+      rect:
+        serializedVersion: 2
+        x: 2580
+        y: 1399
+        width: 227
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77f6ffb03b924b4b89988c21f22118f
+      internalID: 577066841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_40
+      rect:
+        serializedVersion: 2
+        x: 2876
+        y: 1395
+        width: 239
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd99b6e3184e324d9df40d38a58c584
+      internalID: 1698391279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_41
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 954
+        width: 392
+        height: 425
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf826ff8179a8d34d9ca9f6fb82a0004
+      internalID: -1383151041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_42
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 954
+        width: 344
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d648995aac05074aa3609c4afc30b57
+      internalID: -790360842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_43
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 935
+        width: 433
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d1cc69acd01aa458e17b861dd7df78
+      internalID: -680179997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_44
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 934
+        width: 309
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d231612f7e87cd4aacb7ad646ba7215
+      internalID: 1894839743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_45
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 971
+        width: 297
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3b397aa1f7c274980aa18d376eb992
+      internalID: 1196140210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_46
+      rect:
+        serializedVersion: 2
+        x: 2242
+        y: 999
+        width: 279
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf69c7d39a18aaf4c9c59cac94b8342c
+      internalID: -1395195696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_47
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 1026
+        width: 183
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8e1bfc419124a84f911508a379afafb
+      internalID: 37110587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_48
+      rect:
+        serializedVersion: 2
+        x: 2865
+        y: 1059
+        width: 243
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c35d01b1506cad4d8839481ff4dc620
+      internalID: -26754554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_49
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 510
+        width: 342
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9037d739d0f5fe743ba08b9c577b945b
+      internalID: 1793950938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_50
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 548
+        width: 314
+        height: 348
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a85fef67ae08714d9b120f76697cfe9
+      internalID: 1842182308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_51
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 532
+        width: 345
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e81487ea9e9ad1047a077205f1f0d0a3
+      internalID: 759384059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_52
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 548
+        width: 318
+        height: 340
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd4194f886fd0c49b9025d2134eff43
+      internalID: 782746310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_53
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 787
+        width: 73
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9935d4027228b4e41b4e167d9d905e87
+      internalID: 317646998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_54
+      rect:
+        serializedVersion: 2
+        x: 2187
+        y: 771
+        width: 178
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d7af378382061479d534cc47968c90
+      internalID: -1080705547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_55
+      rect:
+        serializedVersion: 2
+        x: 2412
+        y: 776
+        width: 187
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e752d78c717a93f478aa71198d671a57
+      internalID: 1859263146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_56
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 765
+        width: 219
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e01328c27b26be43834f297542a6a19
+      internalID: -2004843555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_57
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 773
+        width: 154
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89b0cf7f98d49941a12480a5d9c71fc
+      internalID: 767365608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_58
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 551
+        width: 162
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4afc67e0607704e9711b2d67039d85
+      internalID: 1742310494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_59
+      rect:
+        serializedVersion: 2
+        x: 2188
+        y: 554
+        width: 182
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42230d42a394200458fd1cbede33effb
+      internalID: -369065446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_60
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 566
+        width: 191
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21f952c97f27b1449e3f8273774af6e
+      internalID: -228686339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_61
+      rect:
+        serializedVersion: 2
+        x: 2682
+        y: 554
+        width: 147
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e170a4db4a6a1448498dea59b80c46
+      internalID: 2069577206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_62
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 551
+        width: 183
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be59d882fa32a748938e04713ce23d8
+      internalID: -381864364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_63
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 107
+        width: 359
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283121b52452e0b45a22df1a247a852a
+      internalID: -117121413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_64
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 105
+        width: 334
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b85ec0a0cc45b4994a682841ce5c2b
+      internalID: 324941071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_65
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 106
+        width: 355
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7690bf34ed9c76544885432be8efbaf3
+      internalID: -620552977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_66
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 104
+        width: 326
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4483c3e23401d4dbb4ba02e0ff9f40
+      internalID: -1428560956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_67
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 271
+        width: 170
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0126da1340fa224f87f4333d2474148
+      internalID: 1942354251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_68
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 340
+        width: 174
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53939584bb7566a429c320b947ed1eb3
+      internalID: -931872988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_69
+      rect:
+        serializedVersion: 2
+        x: 2430
+        y: 299
+        width: 169
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737977a3cd228b74483230b4dc26546d
+      internalID: 2013038766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_70
+      rect:
+        serializedVersion: 2
+        x: 2687
+        y: 357
+        width: 159
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31015553b2d5e7459ac1464ba312da2
+      internalID: -239147334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_71
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 330
+        width: 200
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f5ce1fbafb04743995490d888bc0c4
+      internalID: 106893907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_72
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 137
+        width: 92
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a91efdaa5894444a27dedd2f8bab6c
+      internalID: 376257924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_73
+      rect:
+        serializedVersion: 2
+        x: 2195
+        y: 105
+        width: 178
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94a3a85308240640bc1b3cfde31fc0e
+      internalID: 742384848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_74
+      rect:
+        serializedVersion: 2
+        x: 2417
+        y: 105
+        width: 204
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6300b0a290c3f447af59f02665b87bb
+      internalID: 106110747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_75
+      rect:
+        serializedVersion: 2
+        x: 2673
+        y: 107
+        width: 190
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d98061bd23a124295437f540f459ef
+      internalID: 1826260785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: aiterrain_76
+      rect:
+        serializedVersion: 2
+        x: 2913
+        y: 112
+        width: 189
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8214dc964a362774491964a42ba2e46b
+      internalID: 1639485370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      aiterrain_0: -791314941
+      aiterrain_1: 1114011427
+      aiterrain_10: 1929693150
+      aiterrain_11: 1290365570
+      aiterrain_12: 1058188815
+      aiterrain_13: 984180822
+      aiterrain_14: -293950815
+      aiterrain_15: 1257418974
+      aiterrain_16: -1325617361
+      aiterrain_17: 1072083277
+      aiterrain_18: 428126014
+      aiterrain_19: -1278624722
+      aiterrain_2: -58091917
+      aiterrain_20: -49911510
+      aiterrain_21: 660527545
+      aiterrain_22: -2143467101
+      aiterrain_23: 495807349
+      aiterrain_24: -663855902
+      aiterrain_25: -987733044
+      aiterrain_26: 1679965036
+      aiterrain_27: 1151743296
+      aiterrain_28: 306417980
+      aiterrain_29: -232926751
+      aiterrain_3: -793746764
+      aiterrain_30: 501931362
+      aiterrain_31: 1738641593
+      aiterrain_32: -296603806
+      aiterrain_33: 230390083
+      aiterrain_34: -837522325
+      aiterrain_35: -71637926
+      aiterrain_36: 1050835654
+      aiterrain_37: 1651474057
+      aiterrain_38: 1719309318
+      aiterrain_39: 577066841
+      aiterrain_4: -475346826
+      aiterrain_40: 1698391279
+      aiterrain_41: -1383151041
+      aiterrain_42: -790360842
+      aiterrain_43: -680179997
+      aiterrain_44: 1894839743
+      aiterrain_45: 1196140210
+      aiterrain_46: -1395195696
+      aiterrain_47: 37110587
+      aiterrain_48: -26754554
+      aiterrain_49: 1793950938
+      aiterrain_5: -1398954272
+      aiterrain_50: 1842182308
+      aiterrain_51: 759384059
+      aiterrain_52: 782746310
+      aiterrain_53: 317646998
+      aiterrain_54: -1080705547
+      aiterrain_55: 1859263146
+      aiterrain_56: -2004843555
+      aiterrain_57: 767365608
+      aiterrain_58: 1742310494
+      aiterrain_59: -369065446
+      aiterrain_6: 175604073
+      aiterrain_60: -228686339
+      aiterrain_61: 2069577206
+      aiterrain_62: -381864364
+      aiterrain_63: -117121413
+      aiterrain_64: 324941071
+      aiterrain_65: -620552977
+      aiterrain_66: -1428560956
+      aiterrain_67: 1942354251
+      aiterrain_68: -931872988
+      aiterrain_69: 2013038766
+      aiterrain_7: -743889090
+      aiterrain_70: -239147334
+      aiterrain_71: 106893907
+      aiterrain_72: 376257924
+      aiterrain_73: 742384848
+      aiterrain_74: 106110747
+      aiterrain_75: 1826260785
+      aiterrain_76: 1639485370
+      aiterrain_8: -2058743308
+      aiterrain_9: -682399490
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

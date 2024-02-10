@@ -8,7 +8,6 @@ using System;
 public class EnemyManager : Singleton<EnemyManager>
 {
     private List<Vector3> pathInWorldPositions = new List<Vector3>();
-    [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private float enemyPerSecond = 0.5f;
     private float timeSinceLastEnemy = 0f;
 
@@ -26,7 +25,8 @@ public class EnemyManager : Singleton<EnemyManager>
             Vector3 tilePosition = TilemapManager.Instance.getPathTileCenterPosition(new Vector3Int(node.X, node.Y, 0));
             pathInWorldPositions.Add(tilePosition);
         }
-        StartCoroutine(IncreaseEnemyPerSecond(2f));
+        WaveManager.Instance.onSpawnPoint += SpawnEnemy;
+        //StartCoroutine(IncreaseEnemyPerSecond(2f));
     }
     IEnumerator IncreaseEnemyPerSecond(float seconds)
     {
@@ -39,19 +39,21 @@ public class EnemyManager : Singleton<EnemyManager>
         if (timeSinceLastEnemy > 1f / enemyPerSecond)
         {
             timeSinceLastEnemy = 0f;
-            SpawnEnemy();
+            //SpawnEnemy();
         }
         else
         {
             timeSinceLastEnemy += Time.fixedDeltaTime;
         }
     }
-    void SpawnEnemy()
+    void SpawnEnemy(object sender, SpawnPointEventArgs args)
     {
+        GameObject enemyPrefab = args.EnemyPrefab;
         GameObject obj = Instantiate(enemyPrefab, pathInWorldPositions[0], Quaternion.identity);
         enemiesSpawned.Add(obj);
         Enemy enemy = obj.GetComponent<Enemy>();
         enemy.SetPath(pathInWorldPositions);
+        enemy.Health = (int)(enemy.Health * Mathf.Exp(MainGameConfig.WaveGrowthFactor));
         enemy.onKilled += DestroyEnemy;
         enemy.onKilled += CurrencyManager.Instance.HandleEnemyKilled;
     }

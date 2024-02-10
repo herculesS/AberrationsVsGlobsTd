@@ -16,12 +16,14 @@ public class Enemy : MonoBehaviour
 
     public bool PathEnded { get => pathEnded; private set => pathEnded = value; }
     public int Health { get => health; set => health = value; }
+    public float Speed { get => speed; set => speed = value; }
 
     public void SetPath(List<Vector3> path)
     {
         this.path = path;
         currentTargetPositionOnPath = path[pathIndex];
     }
+
 
     // Update is called once per frame
     void Update()
@@ -56,7 +58,7 @@ public class Enemy : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position,
                                      currentTargetPositionOnPath,
-                                    speed * Time.fixedDeltaTime);
+                                    Speed * Time.fixedDeltaTime);
         return true;
 
     }
